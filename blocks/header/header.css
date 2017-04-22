@@ -1,0 +1,10 @@
+/* Стили для Header*/
+
+.header_block {
+margin: 30px 0; 
+}
+
+.header {
+	font-family: 'Rubik Mono One', sans-serif;
+	font-size: 26px;
+}

@@ -1,0 +1,19 @@
+@media (max-width: 600px) {
+	.addingTask {
+		width: 100%
+	}
+
+	.tasks {
+		width: 100%;
+	}
+}
+
+@media (min-width: 1060px) {
+	.addingTask {
+		width: 60%
+	}
+
+	.tasks {
+		width: 60%;
+	}
+}

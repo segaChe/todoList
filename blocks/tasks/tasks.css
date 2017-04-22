@@ -1,0 +1,75 @@
+.tasks {
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+	font-family: 'Rubik Mono One', sans-serif;
+}
+
+.tasks .container {
+	text-align: left;
+	background-color: #fff;
+	font-size: 20px;
+	width: 100%;
+	height: 40px;
+}
+
+.tasks .container .oneTask {
+	position: relative;
+	height: 40px;
+	line-height: 40px;
+}
+
+.tasks .container .oneTask:hover {
+	background-color: #ddc;
+	cursor: pointer;
+}
+
+.tasks .container .oneTask > * {
+	display: inline-block;
+	height: 40px;
+	vertical-align: middle;
+}
+
+.tasks .container .oneTask .close {
+	position: absolute;
+	right: 0;
+	text-align: center;
+	width: 40px;
+	height: 40px;
+}
+
+.tasks .container .oneTask .close:hover {
+	background-color: #777;
+	color: #fff;
+	cursor: pointer;
+} 
+
+.tasks .container .oneTask div[data-importent] {
+	width: 40px;
+	text-align: center;
+	color: red;
+}
+
+.tasks .container .oneTask div[data-done="false"] {
+	background: url(../../images/item.png) 90% 90% no-repeat;
+	background-size: cover;
+}
+
+.tasks .container .oneTask div[data-importent="true"] {
+	background: url(../../images/exclamation3.gif) 100% 100% no-repeat;
+	background-size: cover;  
+}
+
+.tasks .container .oneTask div[data-done="true"] {
+	background: url(../../images/done3.gif) 90% 90% no-repeat;
+	background-size: cover;
+	
+}
+
+.tasks .container .oneTask div[data-done="true"] + .not {
+	color: #888;
+}
+
+.tasks .container .oneTask div[data-urgently="true"] {
+	color: blue;
+}

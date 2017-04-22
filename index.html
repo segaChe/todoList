@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To-Do List</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./main.css">
+	<link rel="stylesheet" type="text/css" href="./blocks/header/header.css">
+	<link rel="stylesheet" type="text/css" href="./blocks/adding_task/adding_task.css">
+	<link rel="stylesheet" type="text/css" href="./blocks/tasks/tasks.css">
+	<link rel="stylesheet" type="text/css" href="./media.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<!-- Header -->
+	<div class="header_block">
+		<div class="container">
+			<div class="header">To-Do List</div>
+
+			<!-- <div class="date__container">
+				<div class="date__target">Today</div>
+				<div class="calendar">
+					<div class="calendar_img">img Календарь</div>
+					<div class="calendar_tabl">
+						<span class="calendar_tabl__arrow_left button"></span>
+						<span class="calendar_tabl__arrow_right button"></span>
+						<div class="calendar_tabl_wrap"></div>
+					</div>
+				</div>
+			</div> -->
+		</div>
+	</div>
+	<!-- /Header -->
+
+	<!-- AddingTask -->
+	<div class="addingTask">
+		<div class="container">
+			<form class="addingTask_form">
+				<div class="container">
+					<input type="text" name="nameTask" id="nameTask" 
+					placeholder=" Что делать?" size="22">
+				</div>
+
+				<div class="container">
+						<label class="label">
+							<input type="checkbox" name="importentTask" id="importentTask">
+							<img src="./images/exclamation3.gif">
+						</label>
+						<p class="helper">Важно</p>
+										
+						<label class="label">
+							<input type="checkbox" name="urgentlyTask" id="urgentlyTask">
+
+							<img src="./images/timer3.gif">
+						</label>
+						<p class="helper urg">Срочно</p>
+				</div>
+
+				<div class="container addButton">
+					<button type="submit" name="submit" class="add">+</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- /AddingTask -->
+
+	<!-- Tasks -->
+	<div class="tasks">
+		<div class="container">
+			<div class="task">
+				<div class="nameTask" data-done="false">First task</div>
+				<div>\u00D7</div>
+			</div>
+			
+		</div>
+
+		<div class="container doneTasks">
+		
+		</div>
+	</div>
+	<!-- /Tasks -->
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="./blocks/adding_task/adding_task.js"></script>
+	<script type="text/javascript" src="./blocks/tasks/render_tasks.js"></script>
+
+	<script type="text/javascript" src="./main.js"></script>
+	<!-- /Scripts -->
+</body>
+</html>

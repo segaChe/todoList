@@ -1,0 +1,35 @@
+body {
+	text-align: center;
+}
+
+/**/
+body > * {
+	margin-bottom: 20px;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+button {
+	background: none;
+	border: 1px solid #ddd;
+	color: #333;
+	font-size: 1em;
+	padding: 0;
+	width: 40px;
+}
+
+button::-moz-focus-inner 
+{
+  border: 0;
+}
+
+button:focus {
+	outline: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
