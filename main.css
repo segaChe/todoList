@@ -33,3 +33,35 @@ button:focus {
 input[type="checkbox"] {
 	display: none;
 }
+
+.notice {
+	position: absolute;
+	top: -85%;
+	left: 45%;
+	width: 150px;
+	height: 30px;
+	background-color: #ddc; 
+	font-size: 20px;
+	padding: 2px 8px;
+	color: #777;
+	font-family: 'Arial' sans-serif;
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: 1s;
+}
+
+.notice:after {
+	content: '';
+	position: absolute;
+	bottom: -25px;
+	right: 0px;
+	width: 0;
+	height: 0;
+	display: inline-block;
+	border: 10px solid #ddc;
+	border-right-width: 75px;
+	border-left-width: 75px; 
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: transparent;  
+}

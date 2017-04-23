@@ -35,7 +35,7 @@ class AddingTaskForm {
 		if ( this.data.name || this.data.description) {
 			this.trigger('add', this.data);
 		} else {
-			alert('Задача не поставлена');
+			this.showNotice('ЗАПОЛНИ это поле');
 		}
 
 		event.target.reset();
@@ -70,6 +70,14 @@ class AddingTaskForm {
 			detail: data
 		});
 		this.elem.dispatchEvent(widgetEvent);
+	}
+
+	showNotice (text) {
+		let noticeElem = document.querySelector('.notice');
+		noticeElem.innerHTML = text;
+		noticeElem.style.opacity = 1;
+
+		setTimeout( function () {noticeElem.style.opacity = 0;}, 2200);
 	}
 }
 
