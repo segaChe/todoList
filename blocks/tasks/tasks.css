@@ -46,7 +46,6 @@
 
 .tasks .container .oneTask div[data-importent] {
 	width: 40px;
-	text-align: center;
 	color: red;
 }
 
