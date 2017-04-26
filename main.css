@@ -36,11 +36,11 @@ input[type="checkbox"] {
 
 .notice {
 	position: absolute;
-	top: -85%;
+	top: -100%;
 	left: 45%;
 	width: 150px;
 	height: 30px;
-	background-color: #ddc; 
+	background-color: #e3e4d3;
 	font-size: 20px;
 	padding: 2px 8px;
 	color: #777;
@@ -53,12 +53,12 @@ input[type="checkbox"] {
 .notice:after {
 	content: '';
 	position: absolute;
-	bottom: -25px;
+	bottom: -20px;
 	right: 0px;
 	width: 0;
 	height: 0;
 	display: inline-block;
-	border: 10px solid #ddc;
+	border: 10px solid #e3e4d3;
 	border-right-width: 75px;
 	border-left-width: 75px; 
 	border-left-color: transparent;

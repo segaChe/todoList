@@ -41,12 +41,32 @@
 	display: none;
 	position: absolute;
 	top: -35px;
-	left: 2px;
+	left: -20px;
 	font-size: 15px;
+	width: 200px;
+
+}
+
+.helper.imp {
+	left: -80px;
+}
+
+.helper span {
+	
+	font-family: 'Rubik Mono One', sans-serif;
+}
+
+.helper span span {
+	color: red;
 }
 
 .helper.urg {
-	left: 40px;
+	width: 200px;
+}
+
+.helper.urg span {
+	color: blue;
+	font-family: 'Rubik Mono One', sans-serif;
 }
 
 .label img:hover {

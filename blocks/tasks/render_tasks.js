@@ -46,15 +46,20 @@ class RenderTasks {
 		task.setAttribute('data-index', iter);
 
 		task.innerHTML = `
-				<div class="not" data-importent="` + data.state.importent +`" 
-				data-done="` + data.state.done + `">
-				
+				<div class="not" data-importent="${data.state.importent}" 
+				 data-done="${data.state.done}">
+					<canvas id="canvas`+ iter +`"
+					 width="40px" height="40px" class="stateImg">
+					</canvas>
 				</div> 
-				<div class="not" data-urgently="` + data.state.urgently + `">` + data.name + `</div>
-				<div class="close">&#215;</div>
-		`;
+				<div class="not" data-urgently="${data.state.urgently}">
+					${data.name}
+				</div>
+				<div class="close">&#215;</div>`;
 
 		this.elem.appendChild(task);
+
+		this.draw(data.state, 'canvas' + iter);
 	}
 
 	addTask (task) {
@@ -114,6 +119,48 @@ class RenderTasks {
 			detail: data
 		});
 		this.elem.dispatchEvent(widgetEvent);
+	}
+
+	/**
+	 * отрисовка состояния задачи 
+	 * @param  {object} state состояния задачи
+	 * @param {String} selectror Селектор элемента canvas
+	 */
+	draw(state, selector) {
+		var canvas = document.getElementById(selector);
+		var ctx;
+		if (canvas.getContext){
+        	ctx = canvas.getContext('2d');
+    	}
+
+    	if (state.done) {
+    		//Галочка
+    		ctx.beginPath();
+			ctx.moveTo(10, 15);
+			ctx.lineTo(10, 25);
+			ctx.lineTo(20, 35);
+			ctx.lineTo(35, 15);
+			ctx.lineTo(35,5);
+			ctx.lineTo(20, 25);
+			ctx.fill();
+    	} else if (state.importent) {
+    		//восклицательный знак
+			ctx.fillStyle = "#731000";
+    		ctx.beginPath();
+    		ctx.arc(20, 32, 5, 0, 2*Math.PI, true);
+    		ctx.fill();
+    		ctx.closePath();
+    		ctx.beginPath();
+    		ctx.moveTo(15, 4);
+    		ctx.lineTo(16, 25);
+    		ctx.lineTo(24, 25);
+    		ctx.lineTo(25, 4);
+    		ctx.fill();
+    	} else {
+			//окошко
+    		ctx.fillRect(10, 10, 20, 20);
+    		ctx.clearRect(15, 15, 10, 10);
+		}
 	}
 
 }
